@@ -1,0 +1,382 @@
+[
+  {
+    "question": "Execute a Git subcommand:",
+    "answer": "git {{subcommand}}"
+  },
+  {
+    "question": "Execute a Git subcommand on a custom repository root path:",
+    "answer": "git -C {{path/to/repo}} {{subcommand}}"
+  },
+  {
+    "question": "Execute a Git subcommand with a given configuration set:",
+    "answer": "git -c '{{config.key}}={{value}}' {{subcommand}}"
+  },
+  {
+    "question": "Display help:",
+    "answer": "git {{[-h|--help]}}"
+  },
+  {
+    "question": "Display help for a specific subcommand (like `clone`, `add`, `push`, `log`, etc.):",
+    "answer": "git help {{subcommand}}"
+  },
+  {
+    "question": "Display version:",
+    "answer": "git {{[-v|--version]}}"
+  },
+  {
+    "question": "Start an interactive shell session:",
+    "answer": "bash"
+  },
+  {
+    "question": "Start an interactive shell session without loading startup configs:",
+    "answer": "bash --norc"
+  },
+  {
+    "question": "Execute specific [c]ommands:",
+    "answer": "bash -c \"{{echo 'bash is executed'}}\""
+  },
+  {
+    "question": "Execute a specific script:",
+    "answer": "bash {{path/to/script.sh}}"
+  },
+  {
+    "question": "E[x]ecute a specific script, printing each command before executing it:",
+    "answer": "bash -x {{path/to/script.sh}}"
+  },
+  {
+    "question": "Execute a specific script and stop at the first [e]rror:",
+    "answer": "bash -e {{path/to/script.sh}}"
+  },
+  {
+    "question": "Execute specific commands from `stdin`:",
+    "answer": "{{echo \"echo 'bash is executed'\"}} | bash"
+  },
+  {
+    "question": "Start a [r]estricted shell session:",
+    "answer": "bash -r"
+  },
+  {
+    "question": "[c]reate an archive and write it to a [f]ile:",
+    "answer": "tar cf {{path/to/target.tar}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "[c]reate a g[z]ipped archive and write it to a [f]ile:",
+    "answer": "tar czf {{path/to/target.tar.gz}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "[c]reate a g[z]ipped (compressed) archive from a directory using relative paths:",
+    "answer": "tar czf {{path/to/target.tar.gz}} --directory={{path/to/directory}} ."
+  },
+  {
+    "question": "E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+    "answer": "tar xvf {{path/to/source.tar[.gz|.bz2|.xz]}}"
+  },
+  {
+    "question": "E[x]tract a (compressed) archive [f]ile into the target directory:",
+    "answer": "tar xf {{path/to/source.tar[.gz|.bz2|.xz]}} --directory={{path/to/directory}}"
+  },
+  {
+    "question": "[c]reate a compressed archive and write it to a [f]ile, using the file extension to [a]utomatically determine the compression program:",
+    "answer": "tar caf {{path/to/target.tar.xz}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "Lis[t] the contents of a tar [f]ile [v]erbosely:",
+    "answer": "tar tvf {{path/to/source.tar}}"
+  },
+  {
+    "question": "E[x]tract files matching a pattern from an archive [f]ile:",
+    "answer": "tar xf {{path/to/source.tar}} --wildcards \"{{*.html}}\""
+  },
+  {
+    "question": "Compress a file, replacing it with a `gzip` archive:",
+    "answer": "gzip {{path/to/file}}"
+  },
+  {
+    "question": "Decompress a file, replacing it with the original uncompressed version:",
+    "answer": "gzip {{[-d|--decompress]}} {{path/to/file.gz}}"
+  },
+  {
+    "question": "Compress a file, keeping the original file:",
+    "answer": "gzip {{[-k|--keep]}} {{path/to/file}}"
+  },
+  {
+    "question": "Compress a file, specifying the output filename:",
+    "answer": "gzip {{[-c|--stdout]}} {{path/to/file}} > {{path/to/compressed_file.gz}}"
+  },
+  {
+    "question": "Decompress a `gzip` archive specifying the output filename:",
+    "answer": "gzip {{[-c|--stdout]}} {{[-d|--decompress]}} {{path/to/file.gz}} > {{path/to/uncompressed_file}}"
+  },
+  {
+    "question": "Specify the compression level. 1 is the fastest (low compression), 9 is the slowest (high compression), 6 is the default:",
+    "answer": "gzip -{{1..9}} {{[-c|--stdout]}} {{path/to/file}} > {{path/to/compressed_file.gz}}"
+  },
+  {
+    "question": "Display the name and reduction percentage for each file compressed or decompressed:",
+    "answer": "gzip {{[-v|--verbose]}} {{[-d|--decompress]}} {{path/to/file.gz}}"
+  },
+  {
+    "question": "Search for a pattern within a file:",
+    "answer": "grep \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "Search for an exact string (disables regular expressions):",
+    "answer": "grep {{[-F|--fixed-strings]}} \"{{exact_string}}\" {{path/to/file}}"
+  },
+  {
+    "question": "Search for a pattern in all files recursively in a directory, showing line numbers of matches, ignoring binary files:",
+    "answer": "grep {{[-r|--recursive]}} {{[-n|--line-number]}} {{[-I|--binary-files=without-match]}} \"{{search_pattern}}\" {{path/to/directory}}"
+  },
+  {
+    "question": "Use extended regular expressions (supports `?`, `+`, `{}`, `()`, and `|`), in case-insensitive mode:",
+    "answer": "grep {{[-E|--extended-regexp]}} {{[-i|--ignore-case]}} \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "Print 3 lines of [C]ontext around, [B]efore or [A]fter each match:",
+    "answer": "grep --{{context|before-context|after-context}} 3 \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "Print file name and line number for each match with color output:",
+    "answer": "grep {{[-H|--with-filename]}} {{[-n|--line-number]}} --color=always \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "Search for lines matching a pattern, printing only the matched text:",
+    "answer": "grep {{[-o|--only-matching]}} \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "Search `stdin` for lines that do not match a pattern:",
+    "answer": "cat {{path/to/file}} | grep {{[-v|--invert-match]}} \"{{search_pattern}}\""
+  },
+  {
+    "question": "Copy a local file to a remote host:",
+    "answer": "scp {{path/to/local_file}} {{remote_host}}:{{path/to/remote_file}}"
+  },
+  {
+    "question": "Use a specific port when connecting to the remote host:",
+    "answer": "scp -P {{port}} {{path/to/local_file}} {{remote_host}}:{{path/to/remote_file}}"
+  },
+  {
+    "question": "Copy a file from a remote host to a local directory:",
+    "answer": "scp {{remote_host}}:{{path/to/remote_file}} {{path/to/local_directory}}"
+  },
+  {
+    "question": "Recursively copy the contents of a directory from a remote host to a local directory:",
+    "answer": "scp -r {{remote_host}}:{{path/to/remote_directory}} {{path/to/local_directory}}"
+  },
+  {
+    "question": "Copy a file between two remote hosts transferring through the local host:",
+    "answer": "scp -3 {{host1}}:{{path/to/remote_file}} {{host2}}:{{path/to/remote_directory}}"
+  },
+  {
+    "question": "Use a specific username when connecting to the remote host:",
+    "answer": "scp {{path/to/local_file}} {{remote_username}}@{{remote_host}}:{{path/to/remote_directory}}"
+  },
+  {
+    "question": "Use a specific SSH private key for authentication with the remote host:",
+    "answer": "scp -i {{~/.ssh/private_key}} {{path/to/local_file}} {{remote_host}}:{{path/to/remote_file}}"
+  },
+  {
+    "question": "Use a specific proxy when connecting to the remote host:",
+    "answer": "scp -J {{proxy_username}}@{{proxy_host}} {{path/to/local_file}} {{remote_host}}:{{path/to/remote_file}}"
+  },
+  {
+    "question": "Transfer a file:",
+    "answer": "rsync {{path/to/source}} {{path/to/destination}}"
+  },
+  {
+    "question": "Use archive mode (recursively copy directories, copy symlinks without resolving, and preserve permissions, ownership and modification times):",
+    "answer": "rsync {{[-a|--archive]}} {{path/to/source}} {{path/to/destination}}"
+  },
+  {
+    "question": "Compress the data as it is sent to the destination, display verbose and human-readable progress, and keep partially transferred files if interrupted:",
+    "answer": "rsync {{[-zvhP|--compress --verbose --human-readable --partial --progress]}} {{path/to/source}} {{path/to/destination}}"
+  },
+  {
+    "question": "Recursively copy directories:",
+    "answer": "rsync {{[-r|--recursive]}} {{path/to/source}} {{path/to/destination}}"
+  },
+  {
+    "question": "Transfer directory contents, but not the directory itself:",
+    "answer": "rsync {{[-r|--recursive]}} {{path/to/source/}} {{path/to/destination}}"
+  },
+  {
+    "question": "Use archive mode, resolve symlinks, and skip files that are newer on the destination:",
+    "answer": "rsync {{[-auL|--archive --update --copy-links]}} {{path/to/source}} {{path/to/destination}}"
+  },
+  {
+    "question": "Transfer a directory from a remote host running `rsyncd` and delete files on the destination that do not exist on the source:",
+    "answer": "rsync {{[-r|--recursive]}} --delete rsync://{{host}}:{{path/to/source}} {{path/to/destination}}"
+  },
+  {
+    "question": "Transfer a file over SSH using a different port than the default (22) and show global progress:",
+    "answer": "rsync {{[-e|--rsh]}} 'ssh -p {{port}}' --info=progress2 {{host}}:{{path/to/source}} {{path/to/destination}}"
+  },
+  {
+    "question": "Give the [u]ser who owns a file the right to e[x]ecute it:",
+    "answer": "chmod u+x {{path/to/file}}"
+  },
+  {
+    "question": "Give the [u]ser rights to [r]ead and [w]rite to a file/directory:",
+    "answer": "chmod u+rw {{path/to/file_or_directory}}"
+  },
+  {
+    "question": "Remove e[x]ecutable rights from the [g]roup:",
+    "answer": "chmod g-x {{path/to/file}}"
+  },
+  {
+    "question": "Give [a]ll users rights to [r]ead and e[x]ecute:",
+    "answer": "chmod a+rx {{path/to/file}}"
+  },
+  {
+    "question": "Give [o]thers (not in the file owner's group) the same rights as the [g]roup:",
+    "answer": "chmod o=g {{path/to/file}}"
+  },
+  {
+    "question": "Remove all rights from [o]thers:",
+    "answer": "chmod o= {{path/to/file}}"
+  },
+  {
+    "question": "Change permissions recursively giving [g]roup and [o]thers the ability to [w]rite:",
+    "answer": "chmod {{[-R|--recursive]}} g+w,o+w {{path/to/directory}}"
+  },
+  {
+    "question": "Recursively give [a]ll users [r]ead permissions to files and e[X]ecute permissions to sub-directories within a directory:",
+    "answer": "chmod {{[-R|--recursive]}} a+rX {{path/to/directory}}"
+  },
+  {
+    "question": "Change the owner user of a file/directory:",
+    "answer": "chown {{user}} {{path/to/file_or_directory}}"
+  },
+  {
+    "question": "Change the owner user and group of a file/directory:",
+    "answer": "chown {{user}}:{{group}} {{path/to/file_or_directory}}"
+  },
+  {
+    "question": "Change the owner user and group to both have the name `user`:",
+    "answer": "chown {{user}}: {{path/to/file_or_directory}}"
+  },
+  {
+    "question": "Recursively change the owner of a directory and its contents:",
+    "answer": "chown {{[-R|--recursive]}} {{user}} {{path/to/directory}}"
+  },
+  {
+    "question": "Change the owner of a symbolic link:",
+    "answer": "chown {{[-h|--no-dereference]}} {{user}} {{path/to/symlink}}"
+  },
+  {
+    "question": "Change the owner of a file/directory to match a reference file:",
+    "answer": "chown --reference {{path/to/reference_file}} {{path/to/file_or_directory}}"
+  },
+  {
+    "question": "Make an HTTP GET request and dump the contents in `stdout`:",
+    "answer": "curl {{https://example.com}}"
+  },
+  {
+    "question": "Make an HTTP GET request, follow any `3xx` redirects, and dump the reply headers and contents to `stdout`:",
+    "answer": "curl {{[-L|--location]}} {{[-D|--dump-header]}} - {{https://example.com}}"
+  },
+  {
+    "question": "Download a file, saving the output under the filename indicated by the URL:",
+    "answer": "curl {{[-O|--remote-name]}} {{https://example.com/filename.zip}}"
+  },
+  {
+    "question": "Send form-encoded data (POST request of type `application/x-www-form-urlencoded`). Use `--data @file_name` or `--data @'-'` to read from `stdin`:",
+    "answer": "curl {{[-X|--request]}} POST {{[-d|--data]}} {{'name=bob'}} {{http://example.com/form}}"
+  },
+  {
+    "question": "Send a request with an extra header, using a custom HTTP method and over a proxy (such as BurpSuite), ignoring insecure self-signed certificates:",
+    "answer": "curl {{[-k|--insecure]}} {{[-x|--proxy]}} {{http://127.0.0.1:8080}} {{[-H|--header]}} {{'Authorization: Bearer token'}} {{[-X|--request]}} {{GET|PUT|POST|DELETE|PATCH|...}} {{https://example.com}}"
+  },
+  {
+    "question": "Send data in JSON format, specifying the appropriate Content-Type header:",
+    "answer": "curl {{[-d|--data]}} {{'{\"name\":\"bob\"}'}} {{[-H|--header]}} {{'Content-Type: application/json'}} {{http://example.com/users/1234}}"
+  },
+  {
+    "question": "Pass client certificate and key for a resource, skipping certificate validation:",
+    "answer": "curl {{[-E|--cert]}} {{client.pem}} --key {{key.pem}} {{[-k|--insecure]}} {{https://example.com}}"
+  },
+  {
+    "question": "Resolve a hostname to a custom IP address, with verbose output (similar to editing the `/etc/hosts` file for custom DNS resolution):",
+    "answer": "curl {{[-v|--verbose]}} --resolve {{example.com}}:{{80}}:{{127.0.0.1}} {{http://example.com}}"
+  },
+  {
+    "question": "Download the contents of a URL to a file (named \"foo\" in this case):",
+    "answer": "wget {{https://example.com/foo}}"
+  },
+  {
+    "question": "Download the contents of a URL to a file (named \"bar\" in this case):",
+    "answer": "wget {{[-O|--output-document]}} {{bar}} {{https://example.com/foo}}"
+  },
+  {
+    "question": "Download a single web page and all its resources with 3-second intervals between requests (scripts, stylesheets, images, etc.):",
+    "answer": "wget {{[-p|--page-requisites]}} {{[-k|--convert-links]}} {{[-w|--wait]}} 3 {{https://example.com/somepage.html}}"
+  },
+  {
+    "question": "Download all listed files within a directory and its sub-directories (does not download embedded page elements):",
+    "answer": "wget {{[-m|--mirror]}} {{[-np|--no-parent]}} {{https://example.com/somepath/}}"
+  },
+  {
+    "question": "Limit the download speed and the number of connection retries:",
+    "answer": "wget --limit-rate {{300k}} {{[-t|--tries]}} {{100}} {{https://example.com/somepath/}}"
+  },
+  {
+    "question": "Download a file from an HTTP server using Basic Auth (also works for FTP):",
+    "answer": "wget --user {{username}} --password {{password}} {{https://example.com}}"
+  },
+  {
+    "question": "Continue an incomplete download:",
+    "answer": "wget {{[-c|--continue]}} {{https://example.com}}"
+  },
+  {
+    "question": "Download all URLs stored in a text file to a specific directory:",
+    "answer": "wget {{[-P|--directory-prefix]}} {{path/to/directory}} {{[-i|--input-file]}} {{URLs.txt}}"
+  },
+  {
+    "question": "Create a Python virtual environment:",
+    "answer": "python -m venv {{path/to/virtual_environment}}"
+  },
+  {
+    "question": "Activate the virtual environment (Linux and macOS):",
+    "answer": "source {{path/to/virtual_environment}}/bin/activate"
+  },
+  {
+    "question": "Activate the virtual environment (Windows):",
+    "answer": "{{path\\to\\virtual_environment}}\\Scripts\\activate.bat"
+  },
+  {
+    "question": "Deactivate the virtual environment:",
+    "answer": "deactivate"
+  },
+  {
+    "question": "Create an alias that generates a `venv` folder and automatically activates it:",
+    "answer": "alias venv='python -m venv .venv && source {{.venv/bin/activate|.venv\\Scripts\\activate.bat}}'"
+  },
+  {
+    "question": "Install a package (see `pip install` for more install examples):",
+    "answer": "pip install {{package}}"
+  },
+  {
+    "question": "Install a package to the user's directory instead of the system-wide default location:",
+    "answer": "pip install --user {{package}}"
+  },
+  {
+    "question": "Upgrade a package:",
+    "answer": "pip install {{[-U|--upgrade]}} {{package}}"
+  },
+  {
+    "question": "Uninstall a package:",
+    "answer": "pip uninstall {{package}}"
+  },
+  {
+    "question": "Save installed packages to file:",
+    "answer": "pip freeze > {{requirements.txt}}"
+  },
+  {
+    "question": "Show installed package info:",
+    "answer": "pip show {{package}}"
+  },
+  {
+    "question": "Install packages from a file:",
+    "answer": "pip install {{[-r|--requirement]}} {{requirements.txt}}"
+  }
+]
