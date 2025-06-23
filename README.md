@@ -1,10 +1,17 @@
+### 📹 Demo Video
+
+![Example Video](https://github.com/sayedhanzala/LoRA-TinyLlama-QA-Agent/blob/master/Fine-Tuning-TinyLlama-for-Enhanced-QnA-Performance.mp4)
+
+
+---
+
 ### 🔧 Setup Instructions
 
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/sayedhanzala/fenrir-task.git
-cd fenrir-task
+git clone https://github.com/sayedhanzala/LoRA-TinyLlama-QA-Agent
+cd LoRA-TinyLlama-QA-Agent
 ```
 
 2. **Create and activate a virtual environment**
@@ -71,11 +78,5 @@ python agent.py
 
 - **Static Evaluation:** See `eval_static.md` for prompt-wise base vs fine-tuned outputs.
 - **Dynamic Evaluation:** See `eval_dynamic.md` for ROUGE-L metrics and quality scores.
-
----
-
-### 📹 Demo Video
-
-Loom/MP4 link: [\[Video\]](https://www.loom.com/share/28469253202b4fc1ab6fba84c4bf0d01?sid=610bf449-c6f6-4dbd-b554-7cc58de6a310)
 
 ---
