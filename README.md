@@ -1,6 +1,6 @@
 ### 📹 Demo
 
-![Demo](https://github.com/sayedhanzala/LoRA-TinyLlama-QA-Agent/blob/master/data/Fine-Tuning-TinyLlama-for-Enhanced-QnA-Performance.gif))
+![Demo](https://github.com/sayedhanzala/LoRA-TinyLlama-QA-Agent/blob/master/data/Fine-Tuning-TinyLlama-for-Enhanced-QnA-Performance.gif)
 
 
 ---
@@ -65,11 +65,8 @@ pip install -r requirements.txt
 After training:
 
 ```bash
-python agent.py
+python agent.py "Create a new Git branch and switch to it"
 ```
-
-- A text input will appear in the terminal.
-- Write your question in the text input.
 - Press enter to get the fine-tuned model’s response.
 
 ---
