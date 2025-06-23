@@ -1,6 +1,6 @@
-### 📹 Demo Video
+### 📹 Demo
 
-![Example Video](https://github.com/sayedhanzala/LoRA-TinyLlama-QA-Agent/blob/master/Fine-Tuning-TinyLlama-for-Enhanced-QnA-Performance.mp4)
+![Demo](https://github.com/sayedhanzala/LoRA-TinyLlama-QA-Agent/blob/master/Fine-Tuning-TinyLlama-for-Enhanced-QnA-Performance.gif)
 
 
 ---
